@@ -26,7 +26,7 @@
 
 ### Building on
 
-- **[agent-native](https://github.com/21-Stark-AI/agent-native)** - my fork of Builder.io's agent-native framework. The GCP deployment of it - Cloud Run behind one origin, `Terraform` + Actions, Cloud SQL on a private IP - lives in `agent-native-gcp` (private).
+- **[agent-native](https://github.com/21-Stark-AI/agent-native)** - my fork of Builder.io's agent-native framework. My GCP deployment of it - Cloud Run behind one origin, `Terraform` + Actions, Cloud SQL on a private IP - lives in `agent-native-gcp` (private, in this org).
 
 ### The rest is private
 
