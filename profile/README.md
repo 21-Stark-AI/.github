@@ -22,13 +22,14 @@
 ### The spine
 
 ```text
-stark-skills             hub · skills + multi-LLM review (Claude · Codex · Gemini)
-├── stark-night-watch    automation plane · webhooks + cron
-├── stark-automations    execution plane · Scheduler → Pub/Sub → Cloud Fn → Anthropic
-└── stark-team           dashboard over the fleet
+hub          stark-skills         skills + multi-LLM review (Claude · Codex · Gemini)
 
-ev-infra-group /         shared Terraform foundation
-infra-ai-platform        VPC · WIF · KMS · GAR · registry-driven subnets · LB + cert
+planes       stark-night-watch    automation · webhooks + cron
+             stark-automations    execution · Scheduler → Pub/Sub → Cloud Fn → Anthropic
+             stark-team           dashboard over the fleet
+
+foundation   ev-infra-group       shared Terraform · VPC · WIF · KMS · GAR · LB + cert
+             infra-ai-platform    the pre-migration base it grew out of
 ```
 
 ### The rest of the fleet
