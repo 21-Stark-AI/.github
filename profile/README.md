@@ -23,7 +23,10 @@
 
 - **[stark-skills](https://github.com/21-Stark-AI/stark-skills)** - multi-agent PR code review. 3 AI agents × N domains, hierarchical config, prompts that improve themselves. The flagship.
 - **[stark-marketplace](https://github.com/21-Stark-AI/stark-marketplace)** - share skills, prompts, commands, agents, and MCP servers across `Claude Code`, `Codex`, and `Gemini`.
-- **[agent-native](https://github.com/21-Stark-AI/agent-native)** - a framework for building agent-native applications.
+
+### Building on
+
+- **[agent-native](https://github.com/21-Stark-AI/agent-native)** - my fork of Builder.io's agent-native framework. The GCP deployment of it - Cloud Run behind one origin, `Terraform` + Actions, Cloud SQL on a private IP - lives in `agent-native-gcp` (private).
 
 ### The rest is private
 
