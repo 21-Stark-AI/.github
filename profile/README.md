@@ -2,7 +2,7 @@
 
 # 21 Stark AI
 
-**My lab for multi-agent tooling and infrastructure automation.**
+**Multi-agent developer tooling, built in the open.**
 `Claude` + `Codex` + `Gemini` in parallel. Everything ships through a PR.
 
 <br>
@@ -19,28 +19,15 @@
 
 ---
 
-### The spine
+### Open source
 
-```text
-hub          stark-skills         skills + multi-LLM review (Claude · Codex · Gemini)
+- **[stark-skills](https://github.com/21-Stark-AI/stark-skills)** - multi-agent PR code review. 3 AI agents × N domains, hierarchical config, prompts that improve themselves. The flagship.
+- **[stark-marketplace](https://github.com/21-Stark-AI/stark-marketplace)** - share skills, prompts, commands, agents, and MCP servers across `Claude Code`, `Codex`, and `Gemini`.
+- **[agent-native](https://github.com/21-Stark-AI/agent-native)** - a framework for building agent-native applications.
 
-planes       stark-night-watch    automation · webhooks + cron
-             stark-automations    execution · Scheduler → Pub/Sub → Cloud Fn → Anthropic
-             stark-team           dashboard over the fleet
+### The rest is private
 
-foundation   ev-infra-group       shared Terraform · VPC · WIF · KMS · GAR · LB + cert
-             infra-ai-platform    the pre-migration base it grew out of
-```
-
-### The rest of the fleet
-
-- **`stark-admin`** - workspace + cloud admin capabilities behind an `MCP` server
-- **`stark-marketplace`** - plugin & skill catalog with its own engine
-- **`stark-visual`** - image/video/media generation + an `MCP` server (`Veo`, animated WebP, brand icons)
-- **`stark-voice-to-text`** - transcription pipeline (`Speech-to-Text v2` + multi-LLM enhancement)
-- **`stark-slack-indexer`** - searchable Slack knowledge base
-- **`stark-docs`** - PDF → Markdown
-- **`infra-sentinel`** - platform health & observability
+A working fleet of ~30 repos behind the curtain: Terraform foundations (`ev-infra-group`, `infra-ai-platform`), the automation and execution planes, `MCP` servers over a vendor-admin capability library, plus data, voice, and visual tooling. It runs my day-to-day. Ships to `main`, no SLAs. It's a playground, that's the point.
 
 ### How it works here
 
@@ -48,4 +35,3 @@ foundation   ev-infra-group       shared Terraform · VPC · WIF · KMS · GAR �
 - **Every review's findings land on the PR** - nothing lost
 - **Test live** - the real cloud surface, not localhost
 - **Go / TypeScript** - no new Python
-- **Ships to `main`, no SLAs** - it's a playground, that's the point
