@@ -1,6 +1,6 @@
 <div align="center">
 
-# 21 Stark AI
+# 21Stark
 
 **One engineer's platform org, run as a playground.**
 Multi-agent tooling, infra-as-code, and `MCP` servers. `Claude` + `Codex` + `Gemini` in parallel.
