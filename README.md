@@ -1,4 +1,4 @@
 # .github
 
-Org-level profile & community health files for **21 Stark AI**.
+Org profile and community-health defaults for **21Stark**.
 The org landing page renders [`profile/README.md`](profile/README.md).
