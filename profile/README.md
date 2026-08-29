@@ -9,6 +9,7 @@ Multi-agent tooling, infra-as-code and `MCP` servers. `Claude` + `Codex` + `Gemi
 
 ![Go](https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=flat-square&logo=terraform&logoColor=white)
 ![GCP](https://img.shields.io/badge/Google_Cloud-4285F4?style=flat-square&logo=googlecloud&logoColor=white)
 ![Claude](https://img.shields.io/badge/Claude-D97757?style=flat-square&logo=anthropic&logoColor=white)
@@ -21,7 +22,7 @@ Multi-agent tooling, infra-as-code and `MCP` servers. `Claude` + `Codex` + `Gemi
 
 ---
 
-### Open source
+### ⭐ Open source
 
 The public face of the fleet — the rest is private by default.
 
@@ -32,40 +33,27 @@ The public face of the fleet — the rest is private by default.
 
 ### The fleet
 
-Three dozen private repos, run solo. What they add up to, by domain:
+**58 repositories, run solo — the whole thing, by domain.** Each row opens a full index with every repo and what it does.
 
-**Agents & tooling** — orchestrating `Claude Code`, `Codex` and `Gemini`
-- A multi-agent dev workflow: human-gated spec and plan, check-gated build, evidence-contract review.
-- A cross-runtime marketplace of skills, commands and `MCP` servers, rendered per host.
-- Domain-specialized code-review agents on `Cloud Run` — DevOps, a11y, dependencies, docs, API-compat.
-- A typed engine for driving fleets of coding agents over a terminal control socket.
-- An always-on `Slack` ops agent on a durable local daemon that keeps tickets current and dispatches work.
+| Domain | Repos | What lives here |
+| :-- | :-- | :-- |
+| 🤖 **[Agents & AI workflow](https://github.com/21StarkCom/.github/blob/main/fleet/agents.md)** | 10 | The dev workflow, the marketplace, review agents, MCP servers, orchestration. |
+| 🏗️ **[Platform & infrastructure](https://github.com/21StarkCom/.github/blob/main/fleet/platform.md)** | 8 | GCP + Terraform foundations, GKE, observability, GitHub-as-code. |
+| 🔧 **[Vendor & workspace admin](https://github.com/21StarkCom/.github/blob/main/fleet/admin.md)** | 6 | A capability layer over a dozen SaaS APIs, behind gated writes and kill switches. |
+| 🧠 **[Data, knowledge & search](https://github.com/21StarkCom/.github/blob/main/fleet/data.md)** | 12 | Data platform, Slack + second-brain knowledge, the secrets vault, transcription. |
+| 🎨 **[Media & documents](https://github.com/21StarkCom/.github/blob/main/fleet/media.md)** | 4 | Image, video and document generation, behind MCP. |
+| 💻 **[Frontend, design & UI](https://github.com/21StarkCom/.github/blob/main/fleet/frontend.md)** | 7 | Design system, command-center dashboards, the brand site, TUI + Stream Deck. |
+| ⚙️ **[Ops & meta](https://github.com/21StarkCom/.github/blob/main/fleet/ops.md)** | 7 | Maintenance, notifications, the workspace constitution, this profile repo. |
+| 🪦 **[Archived & retired](https://github.com/21StarkCom/.github/blob/main/fleet/archived.md)** | 4 | Decommissioned or superseded — kept as memory, not dependency. |
 
-**Platform & infra** — foundations that provision and validate themselves
-- Multi-cloud `Terraform`: Workload Identity Federation, split plan/apply CI identities, `KMS`, a registry that drives the subnets, one shared LB and wildcard cert.
-- GitHub itself as code: enterprise and org governance in `Terraform`, import-first, PR-reviewed.
-- Self-hosted observability on its own tier: logs, metrics, dashboards, alerts.
-
-**Vendor & workspace administration**
-- A capability layer over a dozen SaaS APIs — **1,300+ operations** behind keyfile auth, allowlisted transports, gated writes and kill switches.
-
-**Data & knowledge**
-- A `GraphQL` data platform with RBAC over `PostgreSQL`, fronted by `MCP` servers.
-- A `Slack` knowledge server: `BigQuery` hybrid search with an agentic ask layer.
-- A second brain with its own CLI and sync hub.
-- A Mac-native encrypted secrets manager — no credential files on disk.
-
-**Media & documents** — behind `MCP`
-- Image and video: `Veo`, `GPT Image`, `Nano Banana`.
-- Documents: Excel, Word, PowerPoint, PDF.
-- Transcription: `Speech-to-Text v2` into multi-stage LLM enhancement.
+<sub>By language: **22** Go · **14** TypeScript · **8** Python · **5** Terraform (HCL) · **2** Swift · **+5** others</sub>
 
 ---
 
 ### How it works here
 
 | | |
-|---|---|
+| :-- | :-- |
 | **Branch + PR for everything** | No exceptions. Nothing lands on `main` by hand. |
 | **Findings land on the PR** | Every review's output is attached. Nothing lost. |
 | **Test live** | The real cloud surface, not localhost. |
