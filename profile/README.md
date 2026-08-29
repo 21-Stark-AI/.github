@@ -3,7 +3,7 @@
 # 21Stark
 
 **One engineer's platform org, run as a playground.**
-Multi-agent tooling, infra-as-code and `MCP` servers. `Claude` + `Codex` + `Gemini` in parallel.
+Multi-agent tooling, infra-as-code and `MCP` servers. `Claude` + `Codex` + `Gemini`, in parallel.
 
 <br>
 
@@ -13,6 +13,8 @@ Multi-agent tooling, infra-as-code and `MCP` servers. `Claude` + `Codex` + `Gemi
 ![GCP](https://img.shields.io/badge/Google_Cloud-4285F4?style=flat-square&logo=googlecloud&logoColor=white)
 ![Claude](https://img.shields.io/badge/Claude-D97757?style=flat-square&logo=anthropic&logoColor=white)
 
+`58 repositories` · `Go` + `TypeScript` first · `one operator` · `ships to main`
+
 [**Aryeh Kiovetsky**](https://21stark.com) · [**Writing**](https://21stark.com/blog)
 
 </div>
@@ -21,30 +23,53 @@ Multi-agent tooling, infra-as-code and `MCP` servers. `Claude` + `Codex` + `Gemi
 
 ### Open source
 
-- **[stark-skills](https://github.com/21StarkCom/stark-skills)**: the development workflow for `Claude Code` and `Codex`. Human-gated spec and plan, check-gated build, evidence-contract PR review, multi-agent IaC review, session ops. The flagship.
-- **[bifrost](https://github.com/21StarkCom/bifrost)**: the marketplace. One catalog of skills, prompts, commands, agents and MCP servers, rendered per runtime for `Claude Code`, `Codex` and `Gemini`, served at [marketplace.21stark.com](https://marketplace.21stark.com).
+The public face of the fleet — the rest is private by default.
 
-### Behind the curtain
+- **[stark-skills](https://github.com/21StarkCom/stark-skills)** — the development workflow for `Claude Code` and `Codex`. Human-gated spec and plan, check-gated build, evidence-contract PR review, multi-agent IaC review, session ops. **The flagship.**
+- **[bifrost](https://github.com/21StarkCom/bifrost)** — the marketplace. One catalog of skills, prompts, commands, agents and `MCP` servers, rendered per runtime for `Claude Code`, `Codex` and `Gemini`, served at [marketplace.21stark.com](https://marketplace.21stark.com).
 
-Three dozen repos, most of them private. What that adds up to, solo:
+---
 
-- Multi-cloud `Terraform` foundations that provision and validate themselves: Workload Identity Federation, split plan/apply CI identities, `KMS`, a registry that drives the subnets, one shared LB and wildcard cert.
-- GitHub itself as code: enterprise and org governance in Terraform, import-first, PR-reviewed.
-- A vendor-admin layer over a dozen SaaS APIs: **1,300+ capabilities** behind keyfile auth, allowlisted transports, gated writes and kill switches.
+### The fleet
+
+Three dozen private repos, run solo. What they add up to, by domain:
+
+**Agents & tooling** — orchestrating `Claude Code`, `Codex` and `Gemini`
+- A multi-agent dev workflow: human-gated spec and plan, check-gated build, evidence-contract review.
+- A cross-runtime marketplace of skills, commands and `MCP` servers, rendered per host.
+- Domain-specialized code-review agents on `Cloud Run` — DevOps, a11y, dependencies, docs, API-compat.
+- A typed engine for driving fleets of coding agents over a terminal control socket.
+- An always-on `Slack` ops agent on a durable local daemon that keeps tickets current and dispatches work.
+
+**Platform & infra** — foundations that provision and validate themselves
+- Multi-cloud `Terraform`: Workload Identity Federation, split plan/apply CI identities, `KMS`, a registry that drives the subnets, one shared LB and wildcard cert.
+- GitHub itself as code: enterprise and org governance in `Terraform`, import-first, PR-reviewed.
 - Self-hosted observability on its own tier: logs, metrics, dashboards, alerts.
-- A Slack knowledge server: `BigQuery` hybrid search with an agentic ask layer.
-- An always-on ops agent in Slack that keeps tickets current and dispatches work from a durable local daemon.
-- A transcription pipeline: `Speech-to-Text v2` into multi-stage LLM enhancement.
-- Image, video and document generation behind `MCP`: `Veo`, `GPT Image`, `Nano Banana`; Excel, Word, PowerPoint, PDF.
+
+**Vendor & workspace administration**
+- A capability layer over a dozen SaaS APIs — **1,300+ operations** behind keyfile auth, allowlisted transports, gated writes and kill switches.
+
+**Data & knowledge**
+- A `GraphQL` data platform with RBAC over `PostgreSQL`, fronted by `MCP` servers.
+- A `Slack` knowledge server: `BigQuery` hybrid search with an agentic ask layer.
 - A second brain with its own CLI and sync hub.
-- A Mac-native encrypted secrets manager. No credential files on disk.
+- A Mac-native encrypted secrets manager — no credential files on disk.
+
+**Media & documents** — behind `MCP`
+- Image and video: `Veo`, `GPT Image`, `Nano Banana`.
+- Documents: Excel, Word, PowerPoint, PDF.
+- Transcription: `Speech-to-Text v2` into multi-stage LLM enhancement.
+
+---
 
 ### How it works here
 
-- **Branch + PR for everything.** No exceptions.
-- **Every review's findings land on the PR.** Nothing lost.
-- **Test live.** The real cloud surface, not localhost.
-- **Go and TypeScript.** No new Python.
+| | |
+|---|---|
+| **Branch + PR for everything** | No exceptions. Nothing lands on `main` by hand. |
+| **Findings land on the PR** | Every review's output is attached. Nothing lost. |
+| **Test live** | The real cloud surface, not localhost. |
+| **Go and TypeScript** | No new Python. |
 
 <div align="center">
 <br>
