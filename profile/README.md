@@ -33,18 +33,14 @@ The public face of the fleet — the rest is private by default.
 
 ### The fleet
 
-**58 repositories, run solo — the whole thing, by domain.** Each row opens a full index with every repo and what it does.
+**58 repositories, run solo.** Grouped the way the workspace itself is — each row opens a full index with every repo and what it is.
 
-| Domain | Repos | What lives here |
+| Section | Repos | What lives here |
 | :-- | :-- | :-- |
-| 🤖 **[Agents & AI workflow](https://github.com/21StarkCom/.github/blob/main/fleet/agents.md)** | 10 | The dev workflow, the marketplace, review agents, MCP servers, orchestration. |
-| 🏗️ **[Platform & infrastructure](https://github.com/21StarkCom/.github/blob/main/fleet/platform.md)** | 8 | GCP + Terraform foundations, GKE, observability, GitHub-as-code. |
-| 🔧 **[Vendor & workspace admin](https://github.com/21StarkCom/.github/blob/main/fleet/admin.md)** | 6 | A capability layer over a dozen SaaS APIs, behind gated writes and kill switches. |
-| 🧠 **[Data, knowledge & search](https://github.com/21StarkCom/.github/blob/main/fleet/data.md)** | 12 | Data platform, Slack + second-brain knowledge, the secrets vault, transcription. |
-| 🎨 **[Media & documents](https://github.com/21StarkCom/.github/blob/main/fleet/media.md)** | 4 | Image, video and document generation, behind MCP. |
-| 💻 **[Frontend, design & UI](https://github.com/21StarkCom/.github/blob/main/fleet/frontend.md)** | 7 | Design system, command-center dashboards, the brand site, TUI + Stream Deck. |
-| ⚙️ **[Ops & meta](https://github.com/21StarkCom/.github/blob/main/fleet/ops.md)** | 7 | Maintenance, notifications, the workspace constitution, this profile repo. |
-| 🪦 **[Archived & retired](https://github.com/21StarkCom/.github/blob/main/fleet/archived.md)** | 4 | Decommissioned or superseded — kept as memory, not dependency. |
+| 🧭 **[Ecosystem](https://github.com/21StarkCom/.github/blob/main/fleet/ecosystem.md)** | 46 | The Norse-named fleet — services, agents, tools, media and UI. Almost everything cross-cuts via `stark-skills`. |
+| 🏗️ **[Infrastructure](https://github.com/21StarkCom/.github/blob/main/fleet/infrastructure.md)** | 4 | Terraform + GCP foundations — GitHub-as-code and the shared platform every service builds on. |
+| 🧠 **[Second brain](https://github.com/21StarkCom/.github/blob/main/fleet/second-brain.md)** | 3 | Atlas — the LLM-native knowledge engine and the `brain` CLI over the vaults. |
+| 🪦 **[Retired](https://github.com/21StarkCom/.github/blob/main/fleet/retired.md)** | 5 | Terminated, decommissioned or superseded. Kept for history. |
 
 <sub>By language: **22** Go · **14** TypeScript · **8** Python · **5** Terraform (HCL) · **2** Swift · **+5** others</sub>
 
